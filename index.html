@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Edukatif Penggunaan Bus Trans Metro Deli</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <style>
+        html, body {
+            scroll-behavior: smooth;
+            scroll-padding-top: 115px;
+            background: linear-gradient(135deg, rgb(42, 71, 71), rgb(50, 87, 50));
+        }
+
+        .pengantar{
+         font-weight: 100;   
+        }
+
+        .materi{
+            width: 50%;
+            height: 50%;
+            display: flex;
+            justify-content: center;
+        }
+
+        .tatacara {
+            color: white;
+        }
+        
+.img-wrap {
+    position: relative;
+    display: inline-block; /* wrapper shrinks to the image size */
+    overflow: hidden;      
+}
+
+.img-wrap img {
+    display: block;
+    width: 100%;
+    filter: blur(1px) brightness(0.7);  /* blur + slightly darker */
+    transform: scale(1.05); 
+}
+
+.img-text {
+    position: absolute;
+    inset: 0;                 /* cover the whole image */
+    display: flex;
+    align-items: center;      /* vertical center */
+    justify-content: center;  /* horizontal center */
+    text-align: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+    text-shadow: 0 2px 6px rgba(0, 0, 0, 0.7);
+}
+
+        .reveal {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+        
+        .flip-card {
+    width: 100%;
+    max-width: 400px;
+    height: 220px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    position: relative;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+}
+
+.guide-title {
+    text-align: center;
+    color: #0f4c6e;
+    font-weight: 800;
+    text-transform: uppercase;
+}
+
+.guide-panel {
+    border-radius: 0.75rem;
+    overflow: hidden;
+    height: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.guide-panel .panel-header {
+    padding: 0.75rem 1rem;
+    color: white;
+    font-weight: 700;
+    font-size: 1.25rem;
+    text-align: center;
+    text-transform: uppercase;
+}
+
+.guide-panel .panel-body {
+    padding: 1.25rem;
+}
+
+/* Do's = green */
+.guide-panel.do .panel-header { background-color: #43a047; }
+.guide-panel.do .panel-body   { background-color: #dff3e0; }
+
+/* Don'ts = red */
+.guide-panel.dont .panel-header { background-color: #e5533d; }
+.guide-panel.dont .panel-body   { background-color: #fde2dd; }
+
+.guide-item {
+    text-align: center;
+}
+
+.guide-item img {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    object-fit: cover;
+    border-radius: 0.5rem;
+    background-color: #fff;
+}
+
+.guide-item p {
+    margin: 0.5rem 0 0;
+    font-weight: 700;
+    color: #212529;
+}
+
+    </style>
+</head>
+
+<body>
+
+    <!-- Start of Navigation Bar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary sticky-top" style="width: 100%;">
+  <div class="container-fluid">
+    <img src="img/logo.jpeg" style="height: 50px; width: 50px; border-radius: 50%;">
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav">
+        
+        <li class="nav-item">
+          <a class="nav-link" href="#">Home</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#pengantar">Kata Pengnatar</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#tatacara">Tata Cara</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#etika">Etika</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#salar">Do's & Don'ts</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#tutor">Tutorial</a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link" href="#footer">Follow Us</a>
+        </li>
+            </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- End of Navigation Bar -->
+
+    <!-- Start of image of MKWK Team -->
+        <div class="img-wrap">
+            <img src="img/kelompok.jpeg" alt="Foto Anggota MKWK">
+            <div class="img-text">Selamat Datang di Web Edukasi <br>Tata Krama Penggunaan Bus Trans Metro Deli</div>
+        </div>
+    <!-- End of image of MKWK Team -->
+
+    <!-- Start of Kata Pengantar -->
+    <div class="pengantar reveal" id="pengantar">
+
+        <h1 class="text-center mb-5" style="color: #FFFFFF;">Kata Pengantar</h1>
+
+        <div>
+            <div class="text-center mb-5" style="color: #FFFFFF;">
+                <p>Selamat datang di website edukasi tata cara dan tata krama penggunaan Bus Trans Metro Deli! </p>
+                <p>Website ini dikembangkan sebagai media informasi dan edukasi bagi masyarakat, khususnya pengguna transportasi umum di Kota Medan.<br>Melalui website ini, pengunjung dapat mempelajari tata cara menggunakan Bus Trans Metro Deli, mulai dari memantau posisi bus, menunggu di halte, melakukan pembayaran, hingga turun di halte tujuan dengan benar.</p>
+                <p>Selain itu, website ini juga menyediakan informasi mengenai etika selama berada di dalam bus, hal-hal yang dianjurkan dan perlu dihindari, serta video tutorial untuk membantu pengguna memahami proses penggunaan bus dengan lebih mudah.</p>
+                <p>Tujuan dikembangkannya website ini adalah untuk meningkatkan pemahaman masyarakat tentang penggunaan transportasi umum yang tertib, aman, nyaman, dan bertanggung jawab.<br>Kami berharap website ini dapat menjadi sumber informasi yang bermanfaat sekaligus mendorong terciptanya budaya menggunakan transportasi umum yang lebih baik.</p>
+                <p>Terima kasih telah mengunjungi website kami. Semoga informasi yang disajikan dapat memberikan manfaat bagi setiap pengunjung!</p>
+            </div>
+        </div>
+
+    </div>
+    <!-- End of Kata Pengantar -->
+
+<!-- Start of Tata Cara Penggunaan Bus -->
+<div class="tatacara reveal" id="tatacara">
+    <h2 class="text-center mb-5" style="color: #FFFFFF;">Tata Cara Penggunaan Bus Trans Metro Deli</h2>
+
+    <div class="wrapper mt-5 mb-5">
+    <ol>
+
+        <b><li>
+            Pantau Posisi Bus
+        </b></li>
+        <p>Saat ingin menaiki bus, pantau posisi bus yang menuju halte Anda menggunakan link <a href="https://apeksi.medan.go.id/bus-listrik" target="_blank" style="text-decoration: none;">Apeksi</a>. Perhatikan nomor bus, halte tujuan, dan jam keberangkatan.</p>
+        <img class="materi" src="img/apeksi.png" alt="Tampilan Web Apeksi">
+        <br>
+
+        <b><li>
+            Tunggu Bus di Halte terdekat
+        </b></li>
+        <p>Penumpang wajib menunggu di Halte atau Titik Pemberhentian Bus (TPB) resmi. Bus tidak akan berhenti untuk menaikkan atau menurunkan penumpang di sembarang tempat</p>
+        <img class="materi" src="img/halte.png" alt="Tampilan Halte Bus">
+        <br>
+
+        <b><li>
+            Naik ke Bus
+        </b></li>
+        <p>Saat bus tiba di halte, jangan langsung naik. Utamakan penumpang yang turun dari bus, lalu kalian boleh naik.</p>
+        <br>
+
+        <b><li>
+            Sistem Pembayaran(Tap-In)
+        </b></li>
+        <p>Pembayaran bersifat 100% non-tunai, jadi siapkan kartu uang elektronik kalian</p>
+        <table border="1" cellpadding="10" cellspacing="10" style="width: 100%; text-align: center;">
+            <tr>
+                <th>Jenis Pembayaran</th>
+                <th>Kompatibilitas</th>
+            </tr>
+            <tr>
+                <td>Kartu e-Money</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td>QR Code e-Wallet</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td>QRIS Tap</td>
+                <td>✅</td>
+            </tr>
+            <tr>
+                <td>Tunai</td>
+                <td>❌</td>
+            </tr>
+            </table>
+            <br>
+
+        <b><li>
+            Cara Pembayaran
+        </b></li>
+        <div class="list">
+            <ul>
+                <li>Jika anda menggunakan kartu e-Money, cukup tap kartu pada reader di pintu bus. Perlu diingat, satu kartu e-Money hanya dapat digunakan oleh satu orang.</li>
+            </ul>
+            <ul>
+                <li>Jika anda menggunakan QR Code e-Wallet atau QRIS Tap, scan kode QR yang ditampilkan oleh petugas bus atau tampilkan "QR bayar" ke mesin scanner.</li>
+            </ul>
+        </div>
+        <br>
+
+        <b><li>
+            Nikmati Perjalanan
+        </b></li>
+        <p>Setelah berhasil melakukan pembayaran, silahkan pilih tempat duduk yang nyaman jika masih tersedia atau berdiri di area yang tidak mengganggu kenyamanan penumpang lain.</p>
+        <br>
+
+        <b><li>
+            Saat Halte Tujuan Sudah Dekat
+        </b></li>
+        <p>Saat bus sudah dekat dengan halte tujuan anda, tekan tombol peringatan untuk memberi tahu sopir bahwa anda akan turun. Kemasi barang anda, jangan sampai ada barang yang tertinggal.</p>
+        <br>
+
+        <b><li>
+            Turun dari Bus
+        </b></li>
+        <p>Saat bus tiba di halte tujuan, segera turun agar tidak menghalangi penumpang lain yang ingin naik.</p>
+
+    </ol>
+
+    </div>
+
+</div>
+<!-- End of Tata Cara penggunaan Bus -->
+
+<!-- Etika penumpang dalam menggunakan bus listrik -->
+<div class="etika reveal" id="etika">
+
+    <div class="container py-5">
+
+    <h2 class="text-center mt-5 mb-5" style="color: #FFFFFF;">Etika di Dalam Bus</h2>
+
+    <div class="row g-4">
+
+        <!-- Card 1 -->
+        <div class="col-12 col-md-6">
+            <div class="flip-card mx-auto">
+
+                <div class="flip-card-inner">
+
+                    <div class="flip-card-front card shadow">
+                        <div class="card-body text-center">
+                            <h3>Hargai Kursi Prioritas</h3>
+                            <p>Klik atau sentuh untuk mempelajari lebih lanjut</p>
+                        </div>
+                    </div>
+
+                    <div class="flip-card-back card shadow">
+                        <div class="card-body text-center">
+                            <h3>Hargai Kursi Prioritas</h3>
+                            <p>Jangan duduk di kursi yang ditandai dengan <br>"Kursi Prioritas" yang bertanda khusus <br> (Biasanya berwarna merah).</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Card 2 -->
+        <div class="col-12 col-md-6">
+            <div class="flip-card mx-auto">
+
+                <div class="flip-card-inner">
+
+                    <div class="flip-card-front card shadow">
+                        <div class="card-body text-center">
+                            <h3>Geser ke Area Tengah</h3>
+                            <p>Klik atau sentuh untuk mempelajari lebih lanjut</p>
+                        </div>
+                    </div>
+
+                    <div class="flip-card-back card shadow">
+                        <div class="card-body text-center">
+                            <h3>Geser ke Area Tengah</h3>
+                            <p>Jika harus berdiri, jangan menghalangi jalan atau area yang dapat mengganggu kenyamanan penumpang lain.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Card 3 -->
+        <div class="col-12 col-md-6">
+            <div class="flip-card mx-auto">
+
+                <div class="flip-card-inner">
+
+                    <div class="flip-card-front card shadow">
+                        <div class="card-body text-center">
+                            <h3>Jaga Ketenangan</h3>
+                            <p>Klik atau sentuh untuk mempelajari lebih lanjut</p>
+                        </div>
+                    </div>
+
+                    <div class="flip-card-back card shadow">
+                        <div class="card-body text-center">
+                            <h3>Jaga Ketenangan</h3>
+                            <p>Hindari mengobrol terlalu keras atau memutar video/musik yang dapat mengganggu kenyamanan orang lain yang berada di dalam bus.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- Card 4 -->
+        <div class="col-12 col-md-6">
+            <div class="flip-card mx-auto">
+
+                <div class="flip-card-inner">
+
+                    <div class="flip-card-front card shadow">
+                        <div class="card-body text-center">
+                            <h3>Sopan Santun Berdiri</h3>
+                            <p>Klik atau sentuh untuk mempelajari lebih lanjut</p>
+                        </div>
+                    </div>
+
+                    <div class="flip-card-back card shadow">
+                        <div class="card-body text-center">
+                            <h3>Sopan Santun Berdiri</h3>
+                            <p>Berdirilah menghadap ke depan atau ke samping, Jangan berdiri dengan cara yang mengganggu penumpang lainnya.</p>
+                        </div>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+</div>
+<!-- End of Etika penumpang dalam menggunakan bus listrik -->
+
+<!-- Saran dan Larangan dalam penggunaan bus -->
+<div class="salar reveal" id="salar">
+    <h2 class="text-center mb-5" style="color: #FFFFFF;"><i>Do's & Don'ts</i> dalam Penggunaan Bus Listrik</h2>
+
+<div class="salar">
+    <div class="container py-4">
+
+        <div class="row g-4">
+
+            <!-- DO'S -->
+            <div class="col-12 col-lg-6">
+                <div class="guide-panel do">
+                    <div class="panel-header">✅ Lakukan Ini (Do's)</div>
+                    <div class="panel-body">
+                        <div class="row g-3">
+                            <div class="col-6 guide-item">
+                                <img src="img/emoney.png" alt="Siapkan kartu e-Money/saldo e-Wallet">
+                                <p>Siapkan Kartu e-Money/e-Wallet</p>
+                            </div>
+                            <div class="col-6 guide-item">
+                                <img src="img/apeksi.png" alt="Pantau rute lewat aplikasi">
+                                <p>Pantau Rute lewat Aplikasi</p>
+                            </div>
+                            <div class="col-6 guide-item">
+                                <img src="img/kursiprioritas.png" alt="Dahulukan penumpang prioritas">
+                                <p>Dahulukan Penumpang Prioritas</p>
+                            </div>
+                            <div class="col-6 guide-item">
+                                <img src="img/tertibhalte.png" alt="Tertib antre di halte">
+                                <p>Tertib Antre di Halte</p>
+                            </div>
+                            <div class="col-6 guide-item">
+                                <img src="img/bel.png" alt="Tekan tombol pada tiang jika halte tujuan sudah dekat">
+                                <p>Tekan tombol pada tiang jika halte tujuan sudah dekat</p>
+                            </div>
+                            <div class="col-6 guide-item">
+                                <img src="img/barang.png" alt="Jaga barang bawaan anda agar tidak mengganggu penumpang lain">
+                                <p>Jaga barang bawaan anda agar tidak mengganggu penumpang lain</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- DON'TS -->
+            <div class="col-12 col-lg-6">
+                <div class="guide-panel dont">
+                    <div class="panel-header">❌ Hindari Ini (Don'ts)</div>
+                    <div class="panel-body">
+                        <div class="row g-3">
+                            <div class="col-6 guide-item">
+                                <img src="img/tunai.png" alt="Jangan bayar tunai">
+                                <p>Jangan Bayar Tunai</p>
+                            </div>
+                            <div class="col-6 guide-item">
+                                <img src="img/cegat.png" alt="Jangan cegat bus di sembarang jalan">
+                                <p>Jangan Cegat Bus di Sembarang Jalan</p>
+                            </div>
+                            <div class="col-6 guide-item">
+                                <img src="img/eatdrink.jpg" alt="Jangan makan/minum di dalam bus">
+                                <p>Jangan Makan/Minum di Dalam Bus</p>
+                            </div>
+                            <div class="col-6 guide-item">
+                                <img src="img/pintubus.png" alt="Jangan berhenti mendadak di pintu">
+                                <p>Jangan Berhenti Mendadak di Pintu</p>
+                            </div>
+                            <div class="col-6 guide-item">
+                                <img src="img/smoking.png" alt="Jangan merokok, vape, atau barang sejenisnya di dalam Bus">
+                                <p>Jangan merokok, vape, atau barang sejenisnya</p>
+                            </div>
+                            <div class="col-6 guide-item">
+                                <img src="img/sampah.png" alt="Jangan membuang sampah di dalam Bus">
+                                <p>Jangan meninggalkan sampah di dalam Bus</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+</div>
+<!-- End Saran & Larangan dalam penggunaan bus -->
+
+<!-- Start Tutorial Video -->
+<div class="tutor reveal" id="tutor">
+<h1 class="text-center mt-5 mb-5" style="color: #FFFFFF;">Video Tutorial Naik Bus</h1>
+    <iframe width="100%" height="720px"
+        src="https://www.youtube.com/">
+    </iframe>
+</div>
+<!-- End Tutorial Video -->
+
+<!-- Start Footer -->
+<footer class="bg-dark text-white text-center py-3" id="footer">
+    <p>Follow Us for more</p>
+    <a href="https://www.instagram.com/connectiva.6/" target="_blank" class="text-white me-3">
+        <img src="img/logo.jpeg" style="height: 50px; width: 50px; border-radius: 50%;">
+    </a>
+
+    <br>
+
+    <a href="https://www.instagram.com/connectiva.6/" target="_blank" class="text-white me-3">
+        Instagram
+    </a>
+    
+    <br>
+
+    <p>&copy; 2024 MKWK Team. All rights reserved.</p>
+</footer>
+<!-- End Footer -->
+
+<script src="js/bootstrap.bundle.js"></script>
+<script src="fadeio.js"></script>
+
+</body>
+
+</html>
