@@ -9,11 +9,7 @@
         html, body {
             scroll-behavior: smooth;
             scroll-padding-top: 115px;
-            background: linear-gradient(135deg, rgb(42, 71, 71), rgb(50, 87, 50));
-        }
-
-        .pengantar{
-         font-weight: 100;   
+            background: linear-gradient(135deg, rgb(50, 87, 50), rgb(26, 49, 41), rgb(35, 61, 47), rgb(31, 53, 52),  rgb(42, 71, 71), rgb(69, 113, 113));
         }
 
         .materi{
@@ -23,9 +19,6 @@
             justify-content: center;
         }
 
-        .tatacara {
-            color: white;
-        }
         
 .img-wrap {
     position: relative;
@@ -69,6 +62,12 @@
     max-width: 400px;
     height: 220px;
     perspective: 1000px;
+}
+
+table th,
+table td {
+    border: 1px solid white;
+    padding: 10px;
 }
 
 .flip-card-inner {
@@ -148,6 +147,129 @@
     color: #212529;
 }
 
+.pengantar {
+    max-width: 1200px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 1rem;
+    color: #f1f5f9;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.pengantar h1 {
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 3px solid #4fd1c5;
+}
+
+.tatacara {
+    max-width: 1100px;
+    margin: 3rem auto;
+    padding: 2rem 2.5rem;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 1rem;
+    color: #f1f5f9;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+/* Heading */
+.tatacara h2 {
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 3px solid #4fd1c5;
+}
+
+/* Step titles */
+.tatacara ol {
+    padding-left: 1.75rem;
+}
+
+.tatacara li {
+    margin-top: 1.5rem;
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #ffffff;
+}
+
+.tatacara li::marker {
+    color: white;
+    font-weight: 800;
+}
+
+/* Explanation under each step */
+.tatacara ol > p {
+    margin: 0.25rem 0 0;
+    padding-left: 0.75rem;
+    border-left: 3px solid rgba(79, 209, 197, 0.5);
+    color: #dbe4ee;
+    font-size: 1.05rem;
+}
+
+/* Table */
+.tatacara table {
+    margin-top: 1rem;
+    border-collapse: collapse;
+    border-radius: 0.5rem;
+    overflow: hidden;
+}
+
+.tatacara table th {
+    background: rgba(79, 209, 197, 0.25);
+}
+
+.tatacara table th,
+.tatacara table td {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 10px;
+}
+
+.etika {
+    max-width: 1300px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 1rem;
+    color: #f1f5f9;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.etika h2 {
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 3px solid #4fd1c5;
+}
+
+.salar {
+    max-width: 1300px;
+    margin: 3rem auto;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.25);
+    border-radius: 1rem;
+    color: #f1f5f9;
+    font-size: 1.1rem;
+    line-height: 1.8;
+}
+
+.salar h2 {
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 3px solid #4fd1c5;
+}
+
+.tutor h1{
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    padding-bottom: 0.75rem;
+}
+
     </style>
 </head>
 
@@ -168,7 +290,7 @@
         </li>
 
         <li class="nav-item">
-          <a class="nav-link" href="#pengantar">Kata Pengnatar</a>
+          <a class="nav-link" href="#pengantar">Kata Pengantar</a>
         </li>
 
         <li class="nav-item">
@@ -252,7 +374,7 @@
             Sistem Pembayaran(Tap-In)
         </b></li>
         <p>Pembayaran bersifat 100% non-tunai, jadi siapkan kartu uang elektronik kalian</p>
-        <table border="1" cellpadding="10" cellspacing="10" style="width: 100%; text-align: center;">
+        <table style="width: 70%; text-align: center; border-collapse: collapse; border: 1px solid white;">
             <tr>
                 <th>Jenis Pembayaran</th>
                 <th>Kompatibilitas</th>
@@ -318,7 +440,7 @@
 
     <div class="container py-5">
 
-    <h2 class="text-center mt-5 mb-5" style="color: #FFFFFF;">Etika di Dalam Bus</h2>
+    <h2 class="text-center" style="color: #FFFFFF;">Etika di Dalam Bus</h2>
 
     <div class="row g-4">
 
@@ -521,9 +643,11 @@
 <!-- Start Tutorial Video -->
 <div class="tutor reveal" id="tutor">
 <h1 class="text-center mt-5 mb-5" style="color: #FFFFFF;">Video Tutorial Naik Bus</h1>
-    <iframe width="100%" height="720px"
-        src="https://www.youtube.com/">
-    </iframe>
+       <div class="ratio ratio-16x9">
+            <iframe src="https://www.youtube.com/embed/watch?v=QF3fMdu18rI"
+            title="Tutorial naik bus" allowfullscreen>
+            </iframe>
+        </div>
 </div>
 <!-- End Tutorial Video -->
 
